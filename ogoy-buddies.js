@@ -29,6 +29,11 @@ function click(element){
 	element.click()
 }
 
+#/* open member window first */
+menus = tagsWithClass(document, 'div', 'top-menu-item');
+menu_active = menus[2].parentElement.getAttribute('class').includes('hidden');
+!menu_active && click(menus[2]);
+
 buddyList=VAR_BUDDY_LIST;
 buddyFilter = createBuddyFilter(buddyList);
 
@@ -37,5 +42,12 @@ hidden_list = document.getElementById('hidden');
 pilots = tagsWithClass(hidden_list, 'div', 'pilot-name');
 buddies = pilots.filter(buddyFilter);
 buddies.forEach(click);
+
+#/* close member view
+confirms = tagsWithClass(document, 'div', 'confirm-button');
+setTimeout(function(){    
+	!menu_active && click(confirms[1]);
+}, 10000); */
+
 
 })()
