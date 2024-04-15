@@ -1,0 +1,1 @@
+['Morgenthaler Stephan', 'Stephan Morgenthaler', 'Breitinger Dominik', 'Dietrich Olivier', 'Wicki Markus S.', 'Thiébaud Fabrice', 'Dunkel Christoph', 'Aeschbacher Roger']
